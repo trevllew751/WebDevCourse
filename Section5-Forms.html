@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Buttons</title>
+</head>
+<body>
+    <h1>Forms Demo</h1>
+    <form action="/yuh">
+        <button type="button">Do not submit the form here</button>
+        <!--Button type "button" just acts as a button and does nothing-->
+        <p>
+            <label for="username">Enter a username: </label>
+            <input type="text" placeholder="username" id="username" name="username">
+        </p>
+        <p>
+            <label for="password">Enter a password:</label>
+            <input type="password" placeholder="password" id="password" name="password">
+        </p>
+        <p>
+            <label for="color">Enter a color: </label>
+            <input type="color" id="color" name="color">
+        </p>
+        <p>
+            <label for="number">Enter a number: </label>
+            <input type="number" placeholder="enter a number" id="number" name="number">
+        </p>
+        <button>Submit</button>
+        <!--Button without a type defaults to submitting the form-->
+    </form>
+    <h2>Hijacking Search Engines</h2>
+    <h3>Search Reddit</h3>
+    <form action="https://www.reddit.com/search">
+        <input type="text" name="q">
+        <button>Search Reddit</button>
+    </form>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search">
+        <input type="text" name="q">
+        <button>Search Google</button>
+    </form>
+    <h3>Search YouTube</h3>
+    <form action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <button>Search YouTube</button>
+    </form>
+    <h2>More Inputs</h2>
+    <form action="/birds">
+        <label for="agree">I agree to everything</label>
+        <input type="checkbox" name="agree_tos" id="agree" checked>
+        <p>
+            <label for="xs">XS: </label>
+            <input type="radio" name="size" id="xs" value="xsmall">
+            <label for="s">S: </label>
+            <input type="radio" name="size" id="s" value="small">
+            <label for="m">M: </label>
+            <input type="radio" name="size" id="m" value="medium">
+            <!--Need the value attribute so that we know which radio button was pressed-->
+        </p>
+        <p>
+            <label for="meal">Please Select an Entree</label>
+            <select name="meal" id="meal">
+                <option value="fish">Fish</option>
+                <option value="steak">Steak</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="omelette">Omelette</option>
+            </select>
+        </p>
+        <p>
+            <label for="cheese">Amount of Cheese: </label>
+            <input type="range" id="cheese" min="0" max="100" step="10" name="cheese_level">
+        </p>
+        <p>
+            <label for="requests">Any special requests?</label>
+            <br>
+            <textarea name="requests" id="requests" cols="30" rows="10" placeholder="Enter Something"></textarea>
+        </p>
+        <button>Submit</button>
+    </form>
+    <h2>Validations Demo</h2>
+    <form action="/dummy">
+        <p>
+            <label for="first">Enter First Name: </label>
+            <input type="text" name="first" id="first" required>
+            <label for="usernam">Username</label>
+            <input type="text" name="username" id="usernam" minlength="5" maxlength="24">
+        </p>
+        <p>
+<!--            <label for="email">Email</label>-->
+<!--            <input type="email" id="email" name="email" required>-->
+            <label for="url">Enter a url</label>
+            <input type="url" name="url" id="url">
+        </p>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
+
