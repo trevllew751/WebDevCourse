@@ -1,0 +1,21 @@
+h1 {
+    color: black;
+}
+
+h2 {
+    color: darkcyan;
+    background-color: rgb(89, 151, 0);
+}
+
+button {
+    color: magenta;
+}
+
+p {
+    color: darkslateblue;
+    background-color: gold;
+}
+
+body{
+    background-color: cadetblue;
+}
