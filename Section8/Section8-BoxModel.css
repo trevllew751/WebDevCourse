@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+    margin-bottom: 30px;
+}
+
+h1 {
+    background-color: brown;
+    width: 400px;
+    padding-left: 100px;
+    padding-top: 50px;
+    margin-bottom: 0;
+}
+
+#one {
+    background-color: red;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    box-sizing: border-box;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+#two {
+    background-color: orange;
+    border-color: teal;
+    border-width: 3px;
+    border-style: dotted;
+    box-sizing: border-box;
+    border-top-width: 10px;
+
+}
+
+#three {
+    background-color: green;
+    border: 4px solid salmon;
+/*    short hand for border property*/
+/*    border: width style color*/
+    border-left-style: dashed;
+    border-radius: 20%;
+}
+
+button {
+    padding: 10px 20px;
+}
+
+span {
+    margin-left: 40px;
+    margin-top: 20px;
+}
