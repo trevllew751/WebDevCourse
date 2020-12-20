@@ -1,0 +1,11 @@
+section {
+    width: 80%;
+    height: 800px;
+    margin: 0 auto;
+    background: left/40% no-repeat url("https://images.unsplash.com/photo-1607924695502-771763abb610?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"), blueviolet;
+}
+
+h1 {
+    font-size: 100px;
+    color: black;
+}
