@@ -1,0 +1,4 @@
+All done in browser
+Variable Introduction (let, const, var*)
+variable names can have any letter, number, _, $, but cannot start with a number
+Best naming practice (camelCase)
