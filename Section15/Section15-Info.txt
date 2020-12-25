@@ -1,0 +1,20 @@
+All done in browser
+
+Introduced strings
+String indexing (str[index]) and length (str.length)
+String methods (.trim(), .toUpperCase(), .toLowerCase(), .slice(start, end*), .indexOf(str), .replace(search, replace), .repeat(num)
+
+Template literals (super important):
+    Must use backtick key ` (tilde key)
+    Example Below: must use backticks to surround the string then use ${expression, variable, method calls}
+    Like fstring from python f"words {expression, variable, method calls} words"
+    `You bought ${quantity} ${product}. Total is ${price * quantity}`
+
+Undefined and Null
+    Undefined: variables that have no value assigned
+    Null: Explicitly empty
+
+Math Object
+    Math.PI, Math.E, Math.sqrt(), Math.abs()
+    Math.random() -- produces random number in [0, 1)
+    For random int you need to do Math.floor(Math.random() * <max number>) + <start>
