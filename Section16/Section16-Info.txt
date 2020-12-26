@@ -1,0 +1,15 @@
+All in browser
+
+Comparison operators: >, <, >=, <=
+Equality operators: !=, ==, ===, !==
+    ==/!= tries to make both operands the same type and checks if they are equal
+    ===/!== does not try to make both operands the same type and checks if they are equal
+Console, Alert, Prompt
+    console.log()
+    alert()
+    prompt()
+
+Logical operators
+    AND &&
+    OR ||
+    NOT !
