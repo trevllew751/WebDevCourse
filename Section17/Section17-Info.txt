@@ -1,0 +1,65 @@
+In browser
+
+Arrays
+    Example
+    let days = ["Monday", "Tuesday", "Wednesday", true, false, 1234];
+    days.length = 6
+    days[0] = "Monday"
+    days[100] = undefined
+    days[days.length] = 5
+    days --> ["Monday", "Tuesday", "Wednesday", true, false, 1234, 5]
+
+days --> ["Monday", "Tuesday", "Wednesday", true, false, 1234, 5]
+
+    Push, Pop -- Add/Remove from the end
+    days.push("yuh")
+    days --> ["Monday", "Tuesday", "Wednesday", true, false, 1234, 5, "yuh"]
+    days.pop() --> "yuh"
+    days --> ["Monday", "Tuesday", "Wednesday", true, false, 1234, 5]
+
+    Unshift, Shift -- Add/Remove from the beginning
+    days.shift() --> "Monday"
+    days --> ["Tuesday", "Wednesday", true, false, 1234, 5]
+    days.unshift("Yuh")
+    days --> ["Yuh", "Tuesday", "Wednesday", true, false, 1234, 5]
+
+let array1 = [1,2,3];
+let array2 = [4,5,6];
+array1.concat(array2); --> [1,2,3,4,5,6]
+
+array1.includes(1) --> true
+array2.includes(1) --> false
+
+array1.indexOf(1) --> 0
+array1.indexOf(10) --> -1
+
+array1.reverse()
+array1 = [3,2,1]
+
+array1.slice() --> [1,2,3]
+array1.slice(1) --> [2, 3]
+concat(array1, array2).slice(2, 5) --> [3,4,5]
+concat(array1, array2).slice(-4) --> [3,4,5,6]
+
+splice(startIndex, ?numDelete, ?replaceValue)
+sort()
+
+[1,2,3] === [1,2,3] --> false, their memory addresses are not the same
+let nums = [1,2,3]
+nums === nums --> true, their memory addresses are the same
+numsCopy = nums
+numsCopy.push(4)
+    numsCopy = [1,2,3,4]
+    nums = [1,2,3,4]
+    numsCopy and nums are pointing to the same location in memory, so if you change one the other changes as well
+numsCopy === nums --> true, their memory addresses are the same
+
+const nums = [1,2,3]
+nums.push(4) --> [1,2,3,4], no error because the original pointer is not being modified
+nums = [1,2,3,4] --> Error, trying to reassign the pointer
+
+multidimensional arrays
+
+const gameBoard = [[1,2,3],[4,5,6],[7,8,9]];
+To get the number 5:
+    gameBoard[1][1] --> 5
