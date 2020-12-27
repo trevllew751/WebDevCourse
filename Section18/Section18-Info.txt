@@ -1,0 +1,67 @@
+In browser
+
+Objects
+    Example
+    const fitBitData = {
+        totalSteps: 123456789,
+        totalMiles: 3456789,
+        avgCalorieBurn: 41573,
+        workoutsThisWeek: "5 of 7",
+        avgGoodSleep: "2:13"
+    }
+
+    syntax: {key:value, key:value, ...}
+    values can be anything
+    all keys are converted to strings
+
+    fitBitdata["totalSteps"] --> 123456789
+    you can put an expression or variable in the []
+    fitBitData.totalSteps --> 123456789
+
+    Modifying data in an object
+
+    fitBitData.totalSteps = 123
+    fitBitData = {
+            totalSteps: 123,
+            totalMiles: 3456789,
+            avgCalorieBurn: 41573,
+            workoutsThisWeek: "5 of 7",
+            avgGoodSleep: "2:13"
+        }
+    fitBitData["totalSteps"] = 456
+    fitBitData = {
+                totalSteps: 456,
+                totalMiles: 3456789,
+                avgCalorieBurn: 41573,
+                workoutsThisWeek: "5 of 7",
+                avgGoodSleep: "2:13"
+            }
+
+    Adding attributes to the object
+
+    fitBitData.yuh = "yuh"
+    fitBitData = {
+                totalSteps: 123,
+                totalMiles: 3456789,
+                avgCalorieBurn: 41573,
+                workoutsThisWeek: "5 of 7",
+                avgGoodSleep: "2:13",
+                yuh: "yuh"
+            }
+    fitBitData["nuh"] = "nuh"
+    fitBitData = {
+                    totalSteps: 123,
+                    totalMiles: 3456789,
+                    avgCalorieBurn: 41573,
+                    workoutsThisWeek: "5 of 7",
+                    avgGoodSleep: "2:13",
+                    yuh: "yuh"
+                    nuh: "nuh"
+                }
+
+    You can nest arrays in objects and objects in arrays
+
+    const comments = [
+        {username:"Tammy", text:"flesjf", votes:9},
+        {username:"FishBoi", text:"glub glub", votes:94324}
+    ]
