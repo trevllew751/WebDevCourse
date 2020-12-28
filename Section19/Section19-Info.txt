@@ -1,0 +1,74 @@
+In Browser
+
+For loops
+
+for (<initial condition>; <condition boolean expression>; <condition incrementer>) {
+    //run stuff
+}
+
+for (let i = 0; i < 10; i++) {
+    console.log(i);
+}
+Prints out 0-9
+
+Looping over arrays
+Nested loops
+
+While loops
+
+let variable = <condition>
+while (<condition boolean expression) {
+    //run stuff
+    <condition incrementer>
+}
+
+let i = 0;
+while (i < 10) {
+    console.log(i);
+    i++;
+}
+Prints out 0-9
+
+Break keyword: breaks out of the loop
+
+For Of loops
+
+for (let variable of iterable {
+    //run stuff
+}
+
+let arr = [1,2,3,4,5,6,7,8,9];
+for (let n of arr) {
+    console.log(i)
+}
+
+Like a for each loop in Java
+
+Iterating through objects
+Can use a For In loop
+Or can use Object.keys or Object.values
+
+for (let variable in object) {
+    //Run stuff
+}
+
+fitBitData = {
+                    totalSteps: 123,
+                    totalMiles: 3456789,
+                    avgCalorieBurn: 41573,
+                    workoutsThisWeek: "5 of 7",
+                    avgGoodSleep: "2:13",
+                    yuh: "yuh"
+                    nuh: "nuh"
+                }
+
+for (let info in fitBitData) {
+    console.log(info, fitBitData[info]);
+}
+
+for (let value in fitBitData.values) {
+    console.log(value);
+}
+for (let value in fitBitData.keys) {
+    console.log(value);
+}
