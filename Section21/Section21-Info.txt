@@ -1,0 +1,27 @@
+In browser
+
+Function scope
+    Variables declared in functions are only usable inside the function
+    Variables declared outside the function are usable inside and outside the function
+
+Block Scope
+    Variables declared using the "let" or "const" keywords are usable only in that block (conditional, loop, etc)
+    Variables declared using the "var" keyword are accessible outside the block
+
+Lexical Scope
+    Functions nested in a parent function have access to all its parent's variables
+
+Can store functions in variables
+    const add = function (x, y) {
+        return x + y;
+    }
+
+Higher Order Functions
+    Functions that operate on other functions
+    Functions that return other functions
+
+Defining methods in objects
+
+"this" keyword
+
+Try/Catch
