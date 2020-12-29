@@ -1,0 +1,15 @@
+Callbacks and ArrayMethods
+
+forEach method
+map method
+arrow functions
+
+setTimeOut
+setInterval
+
+filter method
+
+every method (like all from python)
+some method (like any from python)
+
+reduce method
