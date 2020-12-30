@@ -1,0 +1,25 @@
+Default params
+    Uses a default value for a parameter if one is not passed
+    Ex:
+    function yuh(name = "YuhMan") {
+        //stiff
+    }
+
+Spread (...)
+    Spreading an iterable into a function call passes each element of the iterable into the function individually
+    Spreading can be used to spread iterables into other iterables
+    Spreading can be used to spread properties in an object to another object
+
+Rest params (...)
+    Used when creating functions, put in the arguments
+    Ex:
+    function sum(...<variable>) {
+        //stuff
+    }
+    Collects all excess or undefined arguments and puts them into the <variable> as an array
+
+Destructuring Arrays
+    Unpacking elements of an array and putting them into individual variables
+
+Destructuring Objects
+    Unpacking properties of an object into
