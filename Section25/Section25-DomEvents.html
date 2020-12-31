@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dom Events</title>
+    <link rel="stylesheet" href="Section25-DomEvents.css">
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Events</h1>
+    <button onclick="alert('you clicked me'); alert('yamero')">Click Me</button>
+    <button id="v2">Click Me 2</button>
+    <button id="v3">Click Me 3</button>
+    <button id="tas">Twist and shout</button>
+
+    <h1>Event Object</h1>
+    <button id="object">Click</button>
+    <input type="text" name="" id="input">
+
+    <h1>Form Events</h1>
+    <form action="/yuh" id="tweet">
+        <input type="text" name="username" id="yuh" placeholder="username">
+        <input type="text" name="tweet" placeholder="tweet">
+        <button>Register</button>
+    </form>
+    <h2>Tweets:</h2>
+    <ul id="tweets">
+        <li>Yuh</li>
+        <li>Nuh</li>
+    </ul>
+
+    <h1 id="inputevent">Input/Change Events</h1>
+    <h2>Type Below</h2>
+    <input type="text" name="inp" id="inp">
+
+    <h1 id="bubble">Event Bubbling</h1>
+    <section onclick="alert('section clicked')">
+        <p onclick="alert('paragraph clicked')">
+            I am a paragraph:
+            <button onclick="alert('yuh')">Glig</button>
+        </p>
+    </section>
+
+    <div id="container">
+        Click to Hide
+        <button id="bub">Change Color</button>
+    </div>
+
+    <script src="Section25-DomEvents.js"></script>
+</body>
+</html>
