@@ -32,13 +32,20 @@ login("spend three racks", "yuhman")
         console.log(err);
     })
 
-const delayedColorChange = (color, delay) => {
-    return new Promise((resolve, reject) => {
-        setTimeout( () => {
-            document.body.style.backgroundColor = color;
-            resolve();
-        }, delay)
-    })
+// const delayedColorChange = (color, delay) => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout( () => {
+//             document.body.style.backgroundColor = color;
+//             resolve();
+//         }, delay)
+//     })
+// }
+
+
+const delayedColorChange = async (color, delay) => {
+    setTimeout(() => {
+        document.body.style.backgroundColor = "color";
+    }, delay);
 }
 
 async function rainbow() {

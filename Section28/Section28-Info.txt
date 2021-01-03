@@ -1,0 +1,47 @@
+AJAX
+    Asynchronous
+    JavaScript
+    And
+    XML
+
+AJAJ
+    Asynchronous
+    JavaScript
+    And
+    JSON
+
+API
+    Application
+    Programming
+    Interface
+
+    Entry points built into an application by developers that allows other pieces of software to access the
+    data/functionality of the app
+
+JSON
+    Java
+    Script
+    Object
+    Notation
+
+    Most common API request return format
+    API header: "application/json"
+
+Postman
+    Developer/debugging tool that allows you to view API requests more easily
+
+Query Strings
+    ?q=:query
+    the query string is the part that starts with the "?"
+
+XHR
+    XMLHttpRequest
+    Very old, do not use
+    Built into JS
+
+Fetch API
+    Newer than XHR and cleaner
+    Built into JS
+
+Axios
+    Better than fetch, reduces steps necessary to get actual JSON data
