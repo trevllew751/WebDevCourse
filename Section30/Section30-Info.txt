@@ -1,0 +1,20 @@
+Using the terminal
+
+Commands
+    ls - Lists all items in the current directory
+    pwd - Shows the path for the current directory
+    touch <filename>.<extension> - Creates new files in current directory
+    rm <filename>.<extension> - Deletes specified item
+    mkdir <directory name> - Creates a new directory (folder) in the current directory
+    rmdir <directory name> - Deletes the specified directory
+    cd <directory name> - Moves into the specified directory (if it is in the current directory)
+    cd .. - Moves a level "up"/"back" in the directory
+    cd ~ - Moves to the home directory
+    cd / - Moves to the root directory
+    man <command> - Gives the instructions for using a command
+
+Relative vs Absolute Paths
+    Absolute paths start with "/"
+    "/" indicates the root directory
+
+    Relative paths are commands that work relative to the current directory
