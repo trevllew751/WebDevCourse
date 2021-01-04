@@ -1,0 +1,18 @@
+Object Oriented Programming
+
+Prototypes
+    Umbrella object for all instances of a certain data type
+    Prototype for Arrays, Strings, Objects, etc
+    Can be modified but not recommended
+
+Factory Functions
+    Function that creates an object with methods and variables from the arguments passed then returns that object
+
+Constructor Functions
+    "new" keyword
+    Define methods on the prototype rather than on the individual objects
+
+Classes
+    Syntactic sugar
+    Does the same thing as factory functions or constructor functions but it is easier to read and cleaner to write
+    "super" and "extends" keyword
