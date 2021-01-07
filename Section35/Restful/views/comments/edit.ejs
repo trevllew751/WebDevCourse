@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Edit</title>
+</head>
+<body>
+    <h1>Edit Comment</h1>
+    <form action="/comments/<%=foundComment.id%>?_method=PATCH" method="POST">
+        <textarea name="comment" id="" cols="30" rows="5">
+            <%= foundComment.comment %>
+        </textarea>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

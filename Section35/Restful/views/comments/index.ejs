@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comments Index</title>
+</head>
+<body>
+    <h1>Comments</h1>
+    <ul>
+        <% for (let com of comments) { %>
+            <li><%= com.comment %> - <b><%= com.username %></b>
+                <a href="/comments/<%= com.id %>">details</a></li>
+        <% } %>
+    </ul>
+    <a href="/comments/new">New Comment</a>
+</body>
+</html>
