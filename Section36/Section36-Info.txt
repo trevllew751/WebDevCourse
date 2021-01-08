@@ -1,0 +1,13 @@
+MongoDB Introduction
+
+SQL vs NoSQL db
+
+Installing MongoDB
+    Add install location to system path to be able to use "mongo" and "mongod" commands in terminal
+
+Insertion (CREATE) with mongoDB
+Find (READ) with mongoDB
+Updating (UPDATE) with mongoDB
+Deleting (DELETE) with mongoDB
+
+Additional mongoDB operators
