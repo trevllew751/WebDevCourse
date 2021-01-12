@@ -1,25 +1,26 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta
-            name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= camp.title %></title>
-</head>
-<body>
-    <h1>Welcome to <%= camp.title %></h1>
-    <h2>Located in <%= camp.location %></h2>
-    <footer>
-        <p><a href="/campgrounds/<%= camp.id %>/edit">Edit Campground</a></p>
-        <a href="/campgrounds">Back to Campgrounds</a>
-    </footer>
-    <br>
-    <div>
-        <form action="/campgrounds/<%= camp.id %>?_method=DELETE" method="POST">
-            <button>Delete Camp</button>
-        </form>
+<% layout("layouts/boilerplate") %>
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <div class="card mb-3">
+            <img src="<%= camp.image %>" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><%= camp.title %></h5>
+                <p class="card-text"><%= camp.description %></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item text-muted"><%= camp.location %></li>
+                <li class="list-group-item">$<%= camp.price %>/night</li>
+            </ul>
+            <div class="card-body">
+                <a href="/campgrounds/<%= camp.id %>/edit" class="card-link btn btn-info">Edit Campground</a>
+                <form class="d-inline" action="/campgrounds/<%= camp.id %>?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete Camp</button>
+                </form>
+            </div>
+            <div class="card-footer text-muted">
+                &copy; YelpCamp
+            </div>
+        </div>
     </div>
-</body>
-</html>
+</div>

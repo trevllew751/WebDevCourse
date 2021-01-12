@@ -1,0 +1,1 @@
+Adding basic styles to YelpCamp
