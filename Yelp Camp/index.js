@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
-const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
+const mongoose = require("mongoose");
 
 mongoose.connect('mongodb://localhost:27017/yelp-camp', {
     useNewUrlParser: true,
