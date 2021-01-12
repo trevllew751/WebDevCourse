@@ -3,6 +3,8 @@ const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
 const mongoose = require("mongoose");
+const ejsMate = require("ejs-mate");
+
 mongoose.connect('mongodb://localhost:27017/yelp-camp', {
     useNewUrlParser: true,
     useCreateIndex: true,
@@ -22,6 +24,7 @@ const Campground = require("./models/campground");
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 
+app.engine("ejs", ejsMate);
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs");
 
