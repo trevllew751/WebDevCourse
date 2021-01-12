@@ -43,10 +43,6 @@ app.post("/campgrounds", async (req, res) => {
     res.redirect(`/campgrounds/${camp.id}`);
 })
 
-app.get("/fix", (req, res) => {
-    res.send("fix")
-})
-
 app.get("/campgrounds/new", (req, res) => {
     res.render("campgrounds/new")
 })
