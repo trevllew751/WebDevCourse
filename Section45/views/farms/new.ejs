@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Product</title>
+</head>
+<body>
+    <h1>Create New Farm</h1>
+    <a href="/products">Product List</a>
+    <div id="form">
+        <form action="/farms" method="POST">
+            <section>
+                <label for="name">Farm Name</label>
+                <input type="text" name="name" id="name">
+            </section>
+            <section>
+                <label for="city">City</label>
+                <input type="text" name="city" id="city">
+            </section>
+            <section>
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+            </section>
+            <button>Create</button>
+        </form>
+    </div>
+    <a href="/farms">Back to Farms</a>
+</body>
+</html>
