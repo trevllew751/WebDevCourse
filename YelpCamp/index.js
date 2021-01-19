@@ -6,7 +6,8 @@ const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
 const catchAsync = require("./utilities/catchAsync");
 const ExpressError = require("./utilities/ExpressError");
-const {campgroundSchema} = require("./schemas");
+const Review = require("./models/review");
+const {campgroundSchema, reviewSchema} = require("./schemas");
 
 mongoose.set("useFindAndModify", false);
 
@@ -39,6 +40,16 @@ const validateCampground = (req, res, next) => {
     }
 }
 
+const validateReview = (req, res, next) => {
+    const {error} = reviewSchema.validate(req.body);
+    if (error) {
+        const msg = error.details.map(el => el.message).join(",");
+        throw new ExpressError(msg, 400);
+    } else {
+        next();
+    }
+}
+
 app.engine("ejs", ejsMate);
 app.set("views", path.join(__dirname, "views"))
 app.set("view engine", "ejs");
@@ -63,7 +74,7 @@ app.get("/campgrounds/new", (req, res) => {
 })
 
 app.get("/campgrounds/:id", catchAsync(async (req, res) => {
-    const camp = await Campground.findById(req.params.id);
+    const camp = await Campground.findById(req.params.id).populate("reviews");
     res.render("campgrounds/show", {camp});
 }))
 
@@ -83,6 +94,23 @@ app.delete("/campgrounds/:id", catchAsync(async (req, res) => {
     await Campground.findByIdAndDelete(req.params.id);
     res.redirect("/campgrounds");
 }))
+
+app.post("/campgrounds/:id/reviews", validateReview, async (req, res) => {
+    const camp = await Campground.findById(req.params.id);
+    const review = new Review(req.body.review);
+    camp.reviews.push(review);
+    await review.save();
+    await camp.save();
+    res.redirect(`/campgrounds/${camp.id}`)
+})
+
+app.delete("/campgrounds/:id/reviews/:reviewId", catchAsync(async (req, res) => {
+    const {id, reviewId} = req.params;
+    await Campground.findByIdAndUpdate(id, {$pull: {reviews: reviewId}});
+    await Review.findByIdAndDelete(reviewId);
+    res.redirect(`/campgrounds/${id}`)
+}))
+
 
 app.all("*", (req, res, next) => {
     next(new ExpressError("Page not found", 404));
