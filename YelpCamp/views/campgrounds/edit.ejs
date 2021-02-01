@@ -3,7 +3,9 @@
 <div class="row">
     <h1 class="text-center">Edit Campground</h1>
     <div class="col-6 offset-3">
-        <form action="/campgrounds/<%= camp.id %>?_method=PUT" method="POST" class="validation" novalidate>
+        <form
+                action="/campgrounds/<%= camp.id %>?_method=PUT" method="POST" class="validation" novalidate
+                enctype="multipart/form-data">
             <div class="mb-3">
                 <label class="form-label" for="title">Title</label>
                 <input
@@ -18,15 +20,6 @@
                 <input
                         class="form-control" type="text" name="campground[location]"
                         id="location" value="<%= camp.location %>">
-            </div>
-            <div class="mb-3">
-                <label class="form-label" for="image">Image Url</label>
-                <input
-                        class="form-control" type="text" name="campground[image]" id="image" value="<%= camp.image %>"
-                        required>
-                <div class="valid-feedback">
-                    Looks good!
-                </div>
             </div>
             <div class="mb-3">
                 <label class="form-label" for="description">Description</label>
@@ -48,6 +41,19 @@
                         Looks good!
                     </div>
                 </div>
+            </div>
+            <div class="mb-3">
+                <% camp.images.forEach((img, i) => { %>
+                    <img src="<%= img.thumbnail %>" alt="" class="img-thumbnail">
+                    <div class="form-chek-inline">
+                        <input type="checkbox" name="deleteImages[]" id="image-<%= i %>" value="<%= img.filename %>">
+                        <label for="image-<%= i %>">Delete?</label>
+                    </div>
+                <% }) %>
+            </div>
+            <div class="mb-3">
+                <label for="formFile" class="form-label">Add More Images</label>
+                <input class="form-control" type="file" name="image" id="formFile" multiple>
             </div>
             <button class=" btn btn-success mb-3">Update Campground</button>
         </form>
