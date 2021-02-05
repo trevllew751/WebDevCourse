@@ -24,9 +24,14 @@ const seedDB = async () => {
     for (let i = 0; i < 50; i++) {
         const rand1000 = Math.floor(Math.random() * 1000);
         await new Campground({
-            author: "600df7b4ecebe01b01f7a20f",
+            // author: "600df7b4ecebe01b01f7a20f",
+            author: "601dbafc41154c0fe08a191a",
             title: `${sample(descriptors)} ${sample(places)}`,
             location: `${cities[rand1000].city}, ${cities[rand1000].state}`,
+            geometry: {
+                type: "Point",
+                coordinates: [-122.3301, 47.6038]
+            },
             images: [
                 {
                     url: 'https://res.cloudinary.com/dkvet3ce7/image/upload/v1612141929/YelpCamp/carbon_2_hlcxf2.png',
