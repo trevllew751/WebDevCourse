@@ -1,0 +1,1 @@
+Redid basic styles for YelpCamp
